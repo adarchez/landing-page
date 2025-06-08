@@ -34,7 +34,7 @@ export default function TestimonialsCarousel() {
   }, [instanceRef]);
 
   return (
-    <section className="py-16 bg-neutral-100 text-gray-700 dark:bg-neutral-950 dark:text-gray-800 dark:text-white">
+    <section className="py-16 mt-20 bg-neutral-200 text-gray-700 dark:bg-neutral-950 dark:text-gray-800 dark:text-white">
       <div className="max-w-4xl mx-auto text-center px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">
           Lo que dicen mis clientes

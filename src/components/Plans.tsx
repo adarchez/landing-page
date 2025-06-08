@@ -1,0 +1,59 @@
+import { motion } from "framer-motion";
+import PricingCard from "@/components/PricingCard";
+
+const planes = [
+  {
+    title: "Básico",
+    price: "$99",
+    features: ["Landing page", "Diseño responsivo", "SEO básico"],
+  },
+  {
+    title: "Profesional",
+    price: "$199",
+    features: [
+      "Todo lo del Básico",
+      "Integración con Stripe",
+      "Dashboard personalizado",
+    ],
+    highlight: true,
+  },
+  {
+    title: "Empresarial",
+    price: "$299",
+    features: [
+      "E-commerce completo",
+      "Base de datos Supabase",
+      "Soporte prioritario",
+    ],
+  },
+];
+
+export default function Projects() {
+  return (
+    <section className="max-w-5xl mx-auto mt-20">
+      <motion.h2
+        className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white mb-4"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-gray-700 dark:text-white text-2xl font-semibold mb-6 text-center">
+          Planes de Servicio
+        </h2>
+      </motion.h2>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {planes.map((plan, i) => (
+            <PricingCard key={plan.title} {...plan} index={i} />
+          ))}
+        </div>
+      </motion.div>
+    </section>
+  );
+}

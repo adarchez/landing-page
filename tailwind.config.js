@@ -10,4 +10,9 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  extend: {
+    perspective: {
+      1000: "1000px",
+    },
+  },
 };
