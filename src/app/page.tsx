@@ -1,7 +1,7 @@
 "use client";
 import { ThemeProvider } from "next-themes";
 import Hero from "@/components/Hero";
-import StackTech from "@/components/StackTech";
+// import StackTech from "@/components/StackTech";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
