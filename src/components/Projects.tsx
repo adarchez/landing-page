@@ -85,7 +85,7 @@ export default function Projects() {
                     key={id}
                     title={project.title}
                     image={project.image}
-                    type={project.type}
+                    type={project.type as "Freelance" | "Personal" | "Demo"}
                     description={project.description}
                     liveUrl={project.liveUrl}
                     githubUrl={project.githubUrl}
