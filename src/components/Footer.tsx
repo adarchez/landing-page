@@ -3,7 +3,7 @@ import { Github, Linkedin } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="text-center dark:text-neutral-500 mt-20 text-sm">
-      © 2025 Darchez Dev. Todos los derechos reservados.
+      © 2025 Intro Dev. Todos los derechos reservados.
       <div className="flex gap-6 mt-6 justify-center">
         <a
           href="https://github.com/adarchez/"

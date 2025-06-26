@@ -5,7 +5,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class", // 👈 Activa dark mode por clases
+  darkMode: "class",
   theme: {
     extend: {},
   },

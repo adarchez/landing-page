@@ -55,11 +55,12 @@ export default function TestimonialsCarousel() {
               const Slide = t.featured ? motion.div : "div";
 
               return (
+                //CHEKEAR ESTOOOOOOOOOOOOO
                 <Slide
                   key={i}
                   className="keen-slider__slide p-6 rounded-xl shadow-md bg-white text-neutral-800 dark:bg-neutral-900 dark:text-white"
-                  initial={t.featured ? { opacity: 0, scale: 0.95 } : false}
-                  animate={t.featured ? { opacity: 1, scale: 1 } : false}
+                  initial={t.featured ? { opacity: 0, scale: 0.95 } : undefined}
+                  animate={t.featured ? { opacity: 1, scale: 1 } : undefined}
                   transition={
                     t.featured
                       ? { duration: 0.6, ease: "easeOut", type: "spring" }

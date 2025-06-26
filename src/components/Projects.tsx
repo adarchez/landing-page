@@ -3,31 +3,32 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projects = [
   {
-    title: "Landing Page para Agencia Creativa",
-    image: "/projects/landing-agencia.jpg",
+    title: "Landing Page Estudio de Arquitectura",
+    image: "/projects/arq.png",
     type: "Freelance",
     description:
-      "Diseño y desarrollo de una landing responsive para una agencia de diseño en Buenos Aires.",
+      "Diseño y desarrollo de una landing responsive para un estudio de arquitectura. Next.js + Tailwind.css",
     liveUrl: "https://cliente-ejemplo.com",
-    githubUrl: "https://github.com/amaroweb/landing-agencia",
+    githubUrl: "https://github.com/adarchez/arq-landingpage",
   },
   {
-    title: "Dashboard Cripto Personal",
-    image: "/projects/dashboard-crypto.jpg",
+    title: "Dashboard de activos financieros",
+    image: "/projects/dashboard.png",
     type: "Personal",
     description:
-      "App de visualización de portafolio cripto con React + Tailwind + API externa.",
+      "App de visualización de portafolio cripto/acciones. React + MaterialUI + Firebase + API externa.",
     liveUrl: "https://amaroweb-crypto.vercel.app",
-    githubUrl: "https://github.com/amaroweb/crypto-dashboard",
+    githubUrl:
+      "https://github.com/adarchez/investfolio/tree/master/frontend/firebase-vite/",
   },
   {
-    title: "Clon de Loom",
-    image: "/projects/loom-clone.jpg",
-    type: "Demo",
+    title: "E-commerce con Next.js",
+    image: "/projects/ecommerce.png",
+    type: "Freelance",
     description:
-      "Clon funcional de Loom para mostrar habilidades con Next.js, Tailwind y grabación de pantalla.",
+      "Desarrollo de un e-commerce completo con Next.js, Tailwind.css y Sanity.io. Incluye carrito, checkout (stripe) y gestión de productos.",
     liveUrl: "https://cliente-ejemplo.com",
-    githubUrl: "https://github.com/amaroweb/loom-clone",
+    githubUrl: "https://github.com/adarchez/ecommerce",
   },
 ];
 
@@ -61,7 +62,7 @@ export default function Projects() {
             >
               Proyectos Destacados
             </motion.h2>
-            <motion.p
+            <motion.div
               className="text-gray-600 dark:text-neutral-400 mb-12 max-w-xl mx-auto"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -71,7 +72,7 @@ export default function Projects() {
               Aquí puedes ver algunos de mis trabajos más recientes, donde
               aplico las últimas tecnologías y mejores prácticas de desarrollo
               web.
-            </motion.p>
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}

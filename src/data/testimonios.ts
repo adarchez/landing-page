@@ -1,9 +1,9 @@
 export const testimonios = [
   {
-    name: "Juan Pérez",
-    company: "StartupX",
+    name: "Alejandra Videla",
+    company: "Arquitectura",
     message:
-      "Amaro fue clave en el éxito de nuestro lanzamiento. Entrega rápida y código limpio.",
+      "Entrega puntual y de alta calidad. Muy recomendable para proyectos web.",
     featured: true,
   },
   {
@@ -13,8 +13,8 @@ export const testimonios = [
       "Excelente experiencia. Profesional, atento y con mucho conocimiento.",
   },
   {
-    name: "Carlos Ruiz",
-    company: "EcommerceNow",
+    name: "Alfonso Darchez",
+    company: "Intro",
     message:
       "Nos ayudó a escalar nuestro sitio con soluciones técnicas efectivas y modernas.",
   },

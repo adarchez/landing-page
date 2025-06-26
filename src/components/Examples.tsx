@@ -21,7 +21,7 @@ const examples = [
 export default function Projects() {
   return (
     <section className="max-w-5xl mx-auto mt-20">
-      <motion.h2
+      <motion.div
         className="text-3xl sm:text-4xl font-bold dark:text-white mb-4"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -31,8 +31,8 @@ export default function Projects() {
         <h2 className="text-gray-700 dark:text-white text-2xl font-semibold mb-6 text-center">
           Inspiraciones de diseño
         </h2>
-      </motion.h2>
-      <motion.p
+      </motion.div>
+      <motion.div
         className="text-gray-600 dark:text-neutral-400 mb-12 max-w-xl mx-auto"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -43,7 +43,7 @@ export default function Projects() {
           Estos sitios son ejemplos de calidad visual y técnica que puedo tomar
           como referencia para crear tu web.
         </p>
-      </motion.p>
+      </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

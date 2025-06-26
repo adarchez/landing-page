@@ -15,6 +15,18 @@ import {
   SiShadcnui,
   SiMui,
   SiBootstrap,
+  SiRedux,
+  SiGraphql,
+  SiMysql,
+  SiVercel,
+  SiNetlify,
+  SiDocker,
+  SiPython,
+  SiWebpack,
+  SiEslint,
+  SiSpring,
+  SiPostman,
+  SiFigma,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -23,21 +35,51 @@ const logos = [
   { name: "React", icon: SiReact, color: "text-sky-400" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-300" },
   { name: "TypeScript", icon: SiTypescript, color: "text-blue-300" },
-  { name: "JavaScript", icon: SiJavascript, color: "text-yellow-300" },
+  { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
   { name: "Node.js", icon: SiNodedotjs, color: "text-green-400" },
-  { name: "Express", icon: SiExpress, color: "text-white" },
-  { name: "Firebase", icon: SiFirebase, color: "text-orange-300" },
-  { name: "MongoDB", icon: SiMongodb, color: "text-green-300" },
-  { name: "Supabase", icon: SiSupabase, color: "text-emerald-300" },
-  { name: "Stripe", icon: SiStripe, color: "text-purple-300" },
-  { name: "Framer Motion", icon: SiFramer, color: "text-pink-300" },
+  { name: "Express", icon: SiExpress, color: "text-gray-300" },
+  { name: "Firebase", icon: SiFirebase, color: "text-orange-400" },
+  { name: "MongoDB", icon: SiMongodb, color: "text-green-400" },
+  { name: "Supabase", icon: SiSupabase, color: "text-emerald-400" },
+  { name: "Stripe", icon: SiStripe, color: "text-purple-400" },
+  { name: "Framer Motion", icon: SiFramer, color: "text-pink-400" },
   { name: "Shadcn/UI", icon: SiShadcnui, color: "text-neutral-300" },
   { name: "Material UI", icon: SiMui, color: "text-indigo-300" },
   { name: "Bootstrap", icon: SiBootstrap, color: "text-indigo-400" },
+  { name: "Redux", icon: SiRedux, color: "text-purple-400" },
+  { name: "GraphQL", icon: SiGraphql, color: "text-pink-400" },
+  { name: "MySQL", icon: SiMysql, color: "text-blue-400" },
+  { name: "Vercel", icon: SiVercel, color: "text-white" },
+  { name: "Netlify", icon: SiNetlify, color: "text-cyan-400" },
+  { name: "Docker", icon: SiDocker, color: "text-blue-500" },
+  { name: "Python", icon: SiPython, color: "text-yellow-400" },
+  { name: "Webpack", icon: SiWebpack, color: "text-purple-600" },
+  { name: "ESLint", icon: SiEslint, color: "text-purple-400" },
+  { name: "Spring", icon: SiSpring, color: "text-green-600" },
+  { name: "Postman", icon: SiPostman, color: "text-orange-400" },
+  { name: "Figma", icon: SiFigma, color: "text-pink-500" },
 ];
 
+function splitIntoGroups<T>(arr: T[], groups: number): T[][] {
+  const result: T[][] = [];
+  const groupSize = Math.floor(arr.length / groups);
+  let startIndex = 0;
+
+  for (let i = 0; i < groups; i++) {
+    let endIndex = startIndex + groupSize;
+    // Para los últimos grupos, agregamos los elementos restantes
+    if (i === groups - 1) {
+      endIndex = arr.length;
+    }
+    result.push(arr.slice(startIndex, endIndex));
+    startIndex = endIndex;
+  }
+
+  return result;
+}
+
 // Separar los logos en 3 grupos
-const splitLogos = [logos.slice(0, 5), logos.slice(5, 10), logos.slice(10)];
+const splitLogos = splitIntoGroups(logos, 3);
 
 function repeatLogos(arr: typeof logos, times: number) {
   return Array(times).fill(arr).flat();
@@ -90,7 +132,7 @@ export default function StackCarousel3Lanes() {
               perspective-1000
             `}
           >
-            {repeatLogos(logoGroup, 6).map((logo, i) => {
+            {repeatLogos(logoGroup, 8).map((logo, i) => {
               const Icon = logo.icon;
               const iconColor =
                 theme === "light"

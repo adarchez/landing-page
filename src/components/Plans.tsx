@@ -4,12 +4,12 @@ import PricingCard from "@/components/PricingCard";
 const planes = [
   {
     title: "Básico",
-    price: "$99",
+    price: "$100",
     features: ["Landing page", "Diseño responsivo", "SEO básico"],
   },
   {
     title: "Profesional",
-    price: "$199",
+    price: "$250",
     features: [
       "Todo lo del Básico",
       "Integración con Stripe",
@@ -19,7 +19,7 @@ const planes = [
   },
   {
     title: "Empresarial",
-    price: "$299",
+    price: "$400",
     features: [
       "E-commerce completo",
       "Base de datos Supabase",
@@ -31,7 +31,7 @@ const planes = [
 export default function Projects() {
   return (
     <section className="max-w-5xl mx-auto mt-20">
-      <motion.h2
+      <motion.div
         className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white mb-4"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function Projects() {
         <h2 className="text-gray-700 dark:text-white text-2xl font-semibold mb-6 text-center">
           Planes de Servicio
         </h2>
-      </motion.h2>
+      </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

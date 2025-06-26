@@ -31,7 +31,7 @@ export default function HeroSection() {
               <br />
               Desarrollador Web Fullstack{" "}
             </motion.h1>
-            <motion.p
+            <motion.div
               className="text-lg md:text-xl dark:text-gray-300 max-w-xl mb-8"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -41,15 +41,14 @@ export default function HeroSection() {
                 Construyo soluciones digitales modernas, efectivas y escalables
                 para tu negocio.
               </p>
-            </motion.p>
+            </motion.div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <motion.a
-                href="#proyectos"
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <Button
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg font-semibold flex items-center gap-2"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 text-lg font-semibold transition flex items-center gap-2"
                   onClick={() =>
                     document
                       .getElementById("proyectos")
@@ -58,9 +57,8 @@ export default function HeroSection() {
                 >
                   Ver proyectos <ArrowRight size={18} />
                 </Button>
-              </motion.a>
-              <motion.a
-                href="#contacto"
+              </motion.div>
+              <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -76,7 +74,7 @@ export default function HeroSection() {
                   <Mail size={18} />
                   <span>Contactarme</span>
                 </Button>
-              </motion.a>
+              </motion.div>
             </div>
           </motion.div>
 

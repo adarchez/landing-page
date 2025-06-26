@@ -80,7 +80,7 @@ export default function Projects() {
   return (
     <section className="max-w-xl mx-auto mt-20" id="contacto">
       <AnimatePresence>
-        <motion.h2
+        <motion.div
           className="text-3xl sm:text-4xl font-bold text-neutral-700 dark:text-white mb-4"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ export default function Projects() {
           viewport={{ once: true }}
         >
           <h2 className="text-2xl font-semibold mb-4 text-center">Contacto</h2>
-        </motion.h2>
+        </motion.div>
         {formVisible && (
           <motion.form
             key="form"

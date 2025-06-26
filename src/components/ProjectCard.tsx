@@ -55,12 +55,13 @@ export default function ProjectCard({
         <div className="flex gap-4 mt-2">
           {liveUrl && (
             <a
-              href={liveUrl}
+              // href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:underline flex items-center gap-1"
+              // className="text-gray-500 hover:underline flex items-center gap-1"
             >
-              <ExternalLink size={16} /> Live Demo
+              <ExternalLink size={16} /> Live Demo (Próximamente)
             </a>
           )}
           {githubUrl && (
