@@ -164,3 +164,5 @@ export default function StackCarousel3Lanes() {
     </div>
   );
 }
+
+//en celulares se ve super lento el carousel
