@@ -96,7 +96,7 @@ export default function StackCarousel3Lanes() {
   const iconSize = 56;
 
   return (
-    <div className="overflow-hidden py-16 space-y-12 bg-gradient-to-b from-grey-900 via-neutral-300 to_neutral-950 dark:bg-gradient-to-b dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950">
+    <div className="py-2 space-y-12 bg-gradient-to-b from-grey-900 via-neutral-300 to_neutral-950 dark:bg-gradient-to-b dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950 overflow-visible">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           className="text-gray-700 text-3xl sm:text-4xl font-bold dark:text-white mb-4"
@@ -144,10 +144,10 @@ export default function StackCarousel3Lanes() {
                   key={i}
                   whileHover={{ scale: 1.3, rotate: 3, rotateY: 10 }}
                   transition={{ type: "spring", stiffness: 150, damping: 10 }}
-                  className="flex flex-col items-center min-w-[64px] sm:min-w-[100px] hover:cursor-pointer group relative transition-shadow duration-300 will-change-transform"
+                  className="flex flex-col items-center min-w-[64px] sm:min-w-[100px] hover:cursor-pointer group relative transition-shadow duration-300 will-change-transform overflow-visible"
                 >
                   <div
-                    className="inline-flex flex-col items-center w-28 transition-transform duration-300 hover:scale-110"
+                    className="inline-flex flex-col items-center w-28 transition-transform duration-300 hover:scale-110 relative z-10 overflow-visible"
                     style={{ overflow: "visible" }}
                   >
                     <Icon size={iconSize} className={`${iconColor} mb-2`} />
@@ -164,5 +164,3 @@ export default function StackCarousel3Lanes() {
     </div>
   );
 }
-
-//en celulares se ve super lento el carousel
