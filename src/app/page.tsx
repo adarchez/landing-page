@@ -1,7 +1,6 @@
 "use client";
 import { ThemeProvider } from "next-themes";
 import Hero from "@/components/Hero";
-// import StackTech from "@/components/StackTech";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import Footer from "@/components/Footer";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -23,7 +22,6 @@ export default function HomePage() {
       <main className="min-h-screen bg-neutral-200 dark:bg-neutral-950 px-6 py-12">
         <FloatingContactButton />
         <Services />
-        {/* <StackTech /> */}
         <StackCarousel />
         <Projects />
         <Plans />

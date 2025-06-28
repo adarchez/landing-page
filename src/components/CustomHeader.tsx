@@ -3,6 +3,22 @@ import Head from "next/head";
 export default function CustomHeader() {
   return (
     <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Amaro Darchez",
+            jobTitle: "Desarrollador Web Freelance",
+            url: "https://introdev.vercel.app/",
+            sameAs: [
+              "https://www.linkedin.com/in/amaro-darchez/",
+              "https://github.com/adarchez",
+            ],
+          }),
+        }}
+      />
       <title>Desarrollo Web Freelance | Sitios modernos y rapidos</title>
       <meta
         name="description"
@@ -24,8 +40,8 @@ export default function CustomHeader() {
         content="Diseño y desarrollo de sitios web modernos, rápidos y profesionales para negocios y emprendedores."
       />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://adarchez.com/" />
-      <meta property="og:image" content="https://adarchez.com/logo.jpg" />
+      <meta property="og:url" content="https://introdev.vercel.app/" />
+      <meta property="og:image" content="https://introdev.vercel.app/" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
