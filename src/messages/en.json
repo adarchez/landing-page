@@ -152,5 +152,10 @@
 
   "FooterSection": {
     "message": "© 2025 Intro Dev. All rights reserved."
+  },
+
+  "SettingsSection": {
+    "titleTheme": "Theme",
+    "titleLang": "Language"
   }
 }
