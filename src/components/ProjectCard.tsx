@@ -61,7 +61,7 @@ export default function ProjectCard({
               className="text-blue-500 hover:underline flex items-center gap-1"
               // className="text-gray-500 hover:underline flex items-center gap-1"
             >
-              <ExternalLink size={16} /> Live Demo (Próximamente)
+              <ExternalLink size={16} /> Live Demo (Coming Soon)
             </a>
           )}
           {githubUrl && (

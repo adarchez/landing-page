@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import PricingCard from "@/components/PricingCard";
+import { useTranslations } from "next-intl";
 
 const planes = [
   {
@@ -29,6 +30,8 @@ const planes = [
 ];
 
 export default function Projects() {
+  const t = useTranslations("PlansSection");
+
   return (
     <section className="max-w-5xl mx-auto mt-20">
       <motion.div
@@ -39,7 +42,7 @@ export default function Projects() {
         viewport={{ once: true }}
       >
         <h2 className="text-gray-700 dark:text-white text-2xl font-semibold mb-6 text-center">
-          Planes de Servicio
+          {t("title")}
         </h2>
       </motion.div>
       <motion.div

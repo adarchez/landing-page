@@ -1,0 +1,151 @@
+{
+  "HeroSection": {
+    "title1": "Hello, I am ",
+    "title2": "Fullstack Web Developer",
+    "name": "Amaro",
+    "about": "I build modern, effective, and scalable digital solutions for your business.",
+    "projectButton": "View projects",
+    "contactButton": "Contact me"
+  },
+
+  "ServicesSection": {
+    "title": "Services",
+    "services": {
+      "1": {
+        "title": "Modern landing pages",
+        "desc": "Fast, responsive, and attractive websites to highlight your brand."
+      },
+      "2": {
+        "title": "Customized dashboards",
+        "desc": "Intuitive interfaces to visualize and manage your business"
+      },
+      "3": {
+        "title": "Integrations with Stripe and Supabase",
+        "desc": "Scalable payment processes and backend ready for production"
+      },
+      "4": {
+        "title": "SEO & Performance",
+        "desc": "Technical optimization for better ranking and speed"
+      }
+    }
+  },
+
+  "StackSection": {
+    "title": "Technology Stack",
+    "desc": "Tools I use to build robust, modern, and scalable products"
+  },
+
+  "ProjectSection": {
+    "title": "Featured Projects",
+    "desc": "Here you can see some of my most recent work, where I apply the latest technologies and best web development practices.",
+    "projects": {
+      "0": {
+        "title": "Architecture Studio Landing Page",
+        "description": "Design and development of a responsive landing page for an architecture studio. Next.js + Tailwind.css"
+      },
+      "1": {
+        "title": "Financial Assets Dashboard",
+        "description": "Crypto/Stock Portfolio Visualization App. React + MaterialUI + Firebase + External API"
+      },
+      "2": {
+        "title": "E-commerce with Next.js",
+        "description": "Development of a complete e-commerce platform with Next.js, Tailwind.css, and Sanity.io. Includes cart, checkout (Stripe), and product management."
+      }
+    }
+  },
+
+  "PlansSection": {
+    "title": "Service Plans",
+    "button": "Choose Plan",
+    "plans": {
+      "0": {
+        "title": "Basic",
+        "price": "$100",
+        "features": {
+          "0": {
+            "name": "Landing page"
+          },
+          "1": {
+            "name": "Responsive Design"
+          },
+          "2": {
+            "name": "Basic SEO"
+          }
+        }
+      },
+      "1": {
+        "title": "Professional",
+        "price": "$250",
+        "features": {
+          "0": {
+            "name": "Everything from the Basic Plan"
+          },
+          "1": {
+            "name": "Integration with Stripe"
+          },
+          "2": {
+            "name": "Customized Dashboard"
+          }
+        }
+      },
+      "2": {
+        "title": "Enterprise",
+        "price": "$400",
+        "features": {
+          "0": {
+            "name": "Complete E-commerce"
+          },
+          "1": {
+            "name": "Supabase Database"
+          },
+          "2": {
+            "name": "Priority Support"
+          }
+        }
+      }
+    }
+  },
+
+  "ExamplesSection": {
+    "title": "Design Inspirations",
+    "description": "These websites are examples of visual and technical quality that I can use as a reference to create your website.",
+    "examples": {
+      "0": {
+        "desc": "Clean design focused on conversions"
+      },
+      "1": {
+        "desc": "Smooth animations and a modern experience"
+      },
+      "2": {
+        "desc": "Simple and professional web application"
+      }
+    }
+  },
+
+  "TestimonialsSection": {
+    "title": "What my clients say",
+    "testimonials": {
+      "0": {
+        "message": "On-time delivery and high-quality work. Highly recommended for web projects."
+      },
+      "1": {
+        "message": "Excellent experience. Professional, attentive, and very knowledgeable."
+      },
+      "2": {
+        "message": "He helped us scale our website with effective and modern technical solutions."
+      }
+    }
+  },
+
+  "ContactSection": {
+    "title": "Contact",
+    "placeholderName": "Name",
+    "placeholderMessage": "Message",
+    "button": "Send message",
+    "sending": "Sending..."
+  },
+
+  "FooterSection": {
+    "message": "© 2025 Intro Dev. All rights reserved."
+  }
+}

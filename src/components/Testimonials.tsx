@@ -7,8 +7,10 @@ import { Quote } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function TestimonialsCarousel() {
+  const tr = useTranslations("TestimonialsSection");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
     {
@@ -36,9 +38,7 @@ export default function TestimonialsCarousel() {
   return (
     <section className="py-16 mt-20 bg-neutral-200 text-gray-700 dark:bg-neutral-950 dark:text-gray-800 dark:text-white">
       <div className="max-w-4xl mx-auto text-center px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">
-          Lo que dicen mis clientes
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8">{tr("title")}</h2>
 
         <div className="relative">
           <div
@@ -68,7 +68,9 @@ export default function TestimonialsCarousel() {
                   }
                 >
                   <Quote className="w-8 h-8 text-blue-600 dark:text-blue-500 mx-auto mb-4" />
-                  <p className="text-lg italic mb-6">“{t.message}”</p>
+                  <p className="text-lg italic mb-6">
+                    “{tr(`testimonials.${i}.message`)}”
+                  </p>
                   <div className="font-semibold">
                     {t.name} –{" "}
                     <span className="text-blue-600 dark:text-blue-400">

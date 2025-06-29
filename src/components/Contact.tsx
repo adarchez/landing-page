@@ -2,8 +2,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import emailjs from "emailjs-com";
+import { useTranslations } from "next-intl";
 
 export default function Projects() {
+  const t = useTranslations("ContactSection");
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [formVisible, setFormVisible] = useState(true);
@@ -87,7 +89,9 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl font-semibold mb-4 text-center">Contacto</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-center">
+            {t("title")}
+          </h2>
         </motion.div>
         {formVisible && (
           <motion.form
@@ -105,7 +109,7 @@ export default function Projects() {
               <input
                 type="text"
                 name="name"
-                placeholder="Nombre"
+                placeholder={t("placeholderName")}
                 value={form.name}
                 onChange={handleChange}
                 className="w-full px-4 py-2 rounded bg-neutral-100 text-neutral-900 dark:bg-neutral-800 placeholder-grey-900 dark:text-white dark:placeholder-neutral-500"
@@ -131,7 +135,7 @@ export default function Projects() {
               <textarea
                 name="message"
                 rows={4}
-                placeholder="Mensaje"
+                placeholder={t("placeholderMessage")}
                 value={form.message}
                 onChange={handleChange}
                 className="w-full px-4 py-2 rounded bg-neutral-100 text-neutral-900 placeholder-grey-900 dark:bg-neutral-800 dark:text-white dark:placeholder-neutral-500"
@@ -149,7 +153,7 @@ export default function Projects() {
                   : "bg-blue-600 hover:bg-blue-700 text-white"
               }`}
             >
-              {loading ? "Enviando..." : "Enviar mensaje"}
+              {loading ? t("sending") : t("button")}
             </Button>
           </motion.form>
         )}

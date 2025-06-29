@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import HeroIllustration from "../../public/coding.svg"; // descargá una de https://undraw.co y guardala ahí
 import { ArrowRight, Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("HeroSection");
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -26,10 +29,12 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Hola, soy{" "}
-              <span className="text-blue-800 dark:text-blue-500">Amaro</span>
+              {t("title1")}
+              <span className="text-blue-800 dark:text-blue-500">
+                {t("name")}
+              </span>
               <br />
-              Desarrollador Web Fullstack{" "}
+              {t("title2")}
             </motion.h1>
             <motion.div
               className="text-lg md:text-xl dark:text-gray-300 max-w-xl mb-8"
@@ -38,8 +43,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <p className="text-lg text-neutral-900 dark:text-neutral-400 mb-8 max-w-md">
-                Construyo soluciones digitales modernas, efectivas y escalables
-                para tu negocio.
+                {t("about")}
               </p>
             </motion.div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -55,7 +59,7 @@ export default function HeroSection() {
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  Ver proyectos <ArrowRight size={18} />
+                  {t("projectButton")} <ArrowRight size={18} />
                 </Button>
               </motion.div>
               <motion.div
@@ -72,7 +76,7 @@ export default function HeroSection() {
                   }
                 >
                   <Mail size={18} />
-                  <span>Contactarme</span>
+                  <span> {t("contactButton")}</span>
                 </Button>
               </motion.div>
             </div>

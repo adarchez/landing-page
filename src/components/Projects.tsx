@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
+import { useTranslations } from "next-intl";
 
 const projects = [
   {
@@ -33,6 +34,8 @@ const projects = [
 ];
 
 export default function Projects() {
+  const t = useTranslations("ProjectSection");
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -60,7 +63,7 @@ export default function Projects() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              Proyectos Destacados
+              {t("title")}
             </motion.h2>
             <motion.div
               className="text-gray-600 dark:text-neutral-400 mb-12 max-w-xl mx-auto"
@@ -69,9 +72,7 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Aquí puedes ver algunos de mis trabajos más recientes, donde
-              aplico las últimas tecnologías y mejores prácticas de desarrollo
-              web.
+              {t("desc")}
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -83,10 +84,10 @@ export default function Projects() {
                 {projects.map((project, id) => (
                   <ProjectCard
                     key={id}
-                    title={project.title}
+                    title={t(`projects.${id}.title`)}
                     image={project.image}
                     type={project.type as "Freelance" | "Personal" | "Demo"}
-                    description={project.description}
+                    description={t(`projects.${id}.description`)}
                     liveUrl={project.liveUrl}
                     githubUrl={project.githubUrl}
                   />

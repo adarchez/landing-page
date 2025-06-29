@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const examples = [
   {
@@ -19,6 +20,8 @@ const examples = [
 ];
 
 export default function Projects() {
+  const t = useTranslations("ExamplesSection");
+
   return (
     <section className="max-w-5xl mx-auto mt-20">
       <motion.div
@@ -29,7 +32,7 @@ export default function Projects() {
         viewport={{ once: true }}
       >
         <h2 className="text-gray-700 dark:text-white text-2xl font-semibold mb-6 text-center">
-          Inspiraciones de diseño
+          {t("title")}
         </h2>
       </motion.div>
       <motion.div
@@ -40,8 +43,7 @@ export default function Projects() {
         viewport={{ once: true }}
       >
         <p className="text-neutral-600 dark:text-neutral-400 text-center mb-10">
-          Estos sitios son ejemplos de calidad visual y técnica que puedo tomar
-          como referencia para crear tu web.
+          {t("description")}
         </p>
       </motion.div>
       <motion.div
@@ -72,7 +74,7 @@ export default function Projects() {
                 </a>
               </h3>
               <p className="text-sm text-neutral-700 dark:text-neutral-400">
-                {site.desc}
+                {t(`examples.${i}.desc`)}
               </p>
             </motion.div>
           ))}

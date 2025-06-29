@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface PricingCardProps {
   title: string;
@@ -12,12 +13,12 @@ interface PricingCardProps {
 }
 
 export default function PricingCard({
-  title,
-  price,
   features,
   highlight = false,
   index,
 }: PricingCardProps) {
+  const t = useTranslations("PlansSection");
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -44,8 +45,10 @@ export default function PricingCard({
     >
       <Card className="bg-gray-100 text-neutral-900 dark:bg-neutral-900 dark:text-white">
         <CardContent className="p-6">
-          <h3 className="text-xl font-semibold mb-2">{title}</h3>
-          <p className="text-4xl font-bold mb-4">{price}</p>
+          <h3 className="text-xl font-semibold mb-2">
+            {t(`plans.${index}.title`)}
+          </h3>
+          <p className="text-4xl font-bold mb-4">{t(`plans.${index}.price`)}</p>
           <ul className="space-y-2 mb-6">
             {features.map((feature, i) => (
               <li
@@ -53,7 +56,7 @@ export default function PricingCard({
                 className="flex items-center text-neutral-700 dark:text-neutral-300"
               >
                 <Check className="w-4 h-4 mr-2 dark:text-green-400" />
-                {feature}
+                {t(`plans.${index}.features.${i}.name`)}
               </li>
             ))}
           </ul>
@@ -62,7 +65,7 @@ export default function PricingCard({
               "transition-colors duration-300 bg-blue-600 text-neutral-100 hover:bg-blue-900 dark:bg-white dark:text-blue-600 dark:hover:bg-neutral-700 dark:hover:text-neutral-100"
             }
           >
-            Elegir plan
+            {t("button")}
           </Button>
         </CardContent>
       </Card>

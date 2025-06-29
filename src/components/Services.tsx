@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Layout, MonitorCheck, CreditCard, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslations } from "next-intl";
 
 const servicios = [
   {
@@ -26,6 +27,8 @@ const servicios = [
 ];
 
 export default function Services() {
+  const t = useTranslations("ServicesSection");
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -42,7 +45,7 @@ export default function Services() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Servicios
+            {t("title")}
           </motion.h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -59,9 +62,11 @@ export default function Services() {
                 <CardContent className="p-6 flex gap-4 items-start">
                   <servicio.icon className="w-6 h-6 text-gray-700 dark:text-blue-500 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-lg">{servicio.title}</h3>
+                    <h3 className="font-semibold text-lg">
+                      {t(`services.${i}.title`)}
+                    </h3>
                     <p className="text-sm text-gray-700 dark:text-neutral-400 mt-1">
-                      {servicio.desc}
+                      {t(`services.${i}.desc`)}
                     </p>
                   </div>
                 </CardContent>

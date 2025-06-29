@@ -29,6 +29,7 @@ import {
   SiFigma,
 } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const logos = [
   { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
@@ -94,9 +95,10 @@ const animationClasses = [
 export default function StackCarousel3Lanes() {
   const { theme } = useTheme();
   const iconSize = 56;
+  const t = useTranslations("StackSection");
 
   return (
-    <div className="py-2 space-y-12 bg-gradient-to-b from-grey-900 via-neutral-300 to_neutral-950 dark:bg-gradient-to-b dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950 overflow-visible">
+    <div className="py-24 space-y-12 bg-gradient-to-b from-grey-900 via-neutral-300 to_neutral-950 dark:bg-gradient-to-b dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950 overflow-visible">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           className="text-gray-700 text-3xl sm:text-4xl font-bold dark:text-white mb-4"
@@ -105,7 +107,7 @@ export default function StackCarousel3Lanes() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Stack Tecnológico
+          {t("title")}
         </motion.h2>
 
         <motion.p
@@ -115,8 +117,7 @@ export default function StackCarousel3Lanes() {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Herramientas que utilizo para construir productos robustos, modernos y
-          escalables.
+          {t("desc")}
         </motion.p>
       </div>
       {splitLogos.map((logoGroup, idx) => (
