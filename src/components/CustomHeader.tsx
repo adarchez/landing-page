@@ -19,7 +19,7 @@ export default function CustomHeader() {
           }),
         }}
       />
-      <title>Desarrollo Web Freelance | Sitios modernos y rapidos</title>
+      <title>Desarrollo Web | Sitios modernos y rapidos</title>
       <meta
         name="description"
         content="Desarrollador web freelance. Diseño sitios modernos, rápidos y responsivos para negocios y emprendedores. ¡Impulsa tu presencia online!"
@@ -33,7 +33,7 @@ export default function CustomHeader() {
       {/* OpenGraph para compartir en Facebook, WhatsApp, etc. */}
       <meta
         property="og:title"
-        content="Desarrollador Web Freelance | Sitios Modernos y Rápidos"
+        content="Desarrollador Web | Sitios Modernos y Rápidos"
       />
       <meta
         property="og:description"
@@ -47,7 +47,7 @@ export default function CustomHeader() {
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"
-        content="Desarrollador Web Freelance | Sitios Modernos y Rápidos"
+        content="Desarrollador Web | Sitios Modernos y Rápidos"
       />
       <meta
         name="twitter:description"
