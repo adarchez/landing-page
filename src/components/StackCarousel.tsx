@@ -98,7 +98,7 @@ export default function StackCarousel3Lanes() {
   const t = useTranslations("StackSection");
 
   return (
-    <div className="py-24 space-y-12 bg-gradient-to-b from-grey-900 via-neutral-300 to_neutral-950 dark:bg-gradient-to-b dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950 overflow-visible">
+    <div className="overflow-hidden py-24 space-y-12 bg-gradient-to-b from-grey-900 via-neutral-300 to_neutral-950 dark:bg-gradient-to-b dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           className="text-gray-700 text-3xl sm:text-4xl font-bold dark:text-white mb-4"
@@ -123,7 +123,7 @@ export default function StackCarousel3Lanes() {
       {splitLogos.map((logoGroup, idx) => (
         <div
           key={idx}
-          className="relative group overflow-x-auto sm:overflow-visible whitespace-nowrap scroll-smooth"
+          className="relative group overflow-hidden sm:overflow-visible whitespace-nowrap scroll-smooth"
         >
           <div
             className={`

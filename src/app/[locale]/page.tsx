@@ -21,7 +21,7 @@ export default function HomePage() {
       <LanguageSwitcher />
       <ThemeToggle />
       <Hero />
-      <main className="min-h-screen bg-neutral-200 dark:bg-neutral-950 px-6 py-12">
+      <main className="min-h-screen bg-neutral-200 dark:bg-neutral-950 px-2 py-12">
         <FloatingContactButton />
         <Services />
         <StackCarousel />
