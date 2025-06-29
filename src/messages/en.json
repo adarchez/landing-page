@@ -11,19 +11,19 @@
   "ServicesSection": {
     "title": "Services",
     "services": {
-      "1": {
+      "0": {
         "title": "Modern landing pages",
         "desc": "Fast, responsive, and attractive websites to highlight your brand."
       },
-      "2": {
+      "1": {
         "title": "Customized dashboards",
         "desc": "Intuitive interfaces to visualize and manage your business"
       },
-      "3": {
+      "2": {
         "title": "Integrations with Stripe and Supabase",
         "desc": "Scalable payment processes and backend ready for production"
       },
-      "4": {
+      "3": {
         "title": "SEO & Performance",
         "desc": "Technical optimization for better ranking and speed"
       }

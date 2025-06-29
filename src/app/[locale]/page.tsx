@@ -12,11 +12,13 @@ import Plans from "@/components/Plans";
 import Examples from "@/components/Examples";
 import Contact from "@/components/Contact";
 import CustomHeader from "@/components/CustomHeader";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function HomePage() {
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
       <CustomHeader />
+      <LanguageSwitcher />
       <ThemeToggle />
       <Hero />
       <main className="min-h-screen bg-neutral-200 dark:bg-neutral-950 px-6 py-12">
