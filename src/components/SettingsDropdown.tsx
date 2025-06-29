@@ -35,7 +35,7 @@ export default function SettingsDropdown() {
     <div className="fixed top-4 right-4 z-50">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <button className="p-2 rounded-full border hover:bg-muted transition">
+          <button className="p-2 rounded-full border hover:bg-muted transition cursor-pointer">
             <Settings2Icon className="h-5 w-5" />
           </button>
         </DropdownMenuTrigger>
