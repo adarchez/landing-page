@@ -142,7 +142,12 @@
     "placeholderName": "Name",
     "placeholderMessage": "Message",
     "button": "Send message",
-    "sending": "Sending..."
+    "sending": "Sending...",
+    "errorNameMessage": "Name is required",
+    "errorEmailMessage": "Invalid email",
+    "errorBodyMessage": "The message cannot be empty",
+    "succesMessage": "✅ Message sent successfully!",
+    "errorMessage": "❌ There was an error sending the message"
   },
 
   "FooterSection": {

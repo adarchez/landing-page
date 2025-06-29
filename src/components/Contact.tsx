@@ -17,10 +17,10 @@ export default function Projects() {
 
   const validate = () => {
     const newErrors: { [key: string]: string } = {};
-    if (!form.name) newErrors.name = "El nombre es obligatorio";
+    if (!form.name) newErrors.name = t("errorNameMessage");
     if (!form.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      newErrors.email = "Email inválido";
-    if (!form.message) newErrors.message = "El mensaje no puede estar vacío";
+      newErrors.email = t("errorEmailMessage");
+    if (!form.message) newErrors.message = t("errorBodyMessage");
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -51,7 +51,7 @@ export default function Projects() {
       setErrors({});
       setFeedback({
         type: "success",
-        message: "✅ ¡Mensaje enviado con éxito!",
+        message: t("succesMessage"),
       });
 
       // Oculta el formulario con fade-out
@@ -66,7 +66,7 @@ export default function Projects() {
       console.error("Error al enviar:", err);
       setFeedback({
         type: "error",
-        message: "❌ Hubo un error al enviar el mensaje",
+        message: t("errorMessage"),
       });
     } finally {
       setLoading(false);

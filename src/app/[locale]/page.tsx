@@ -35,3 +35,9 @@ export default function HomePage() {
     </ThemeProvider>
   );
 }
+
+//publicar
+
+//agregar secciones de proyectos en detalles con imagenes y mas desripcion
+//mensajes de errror y succes en ingles
+//sacar toster
