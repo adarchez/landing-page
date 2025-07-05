@@ -13,7 +13,7 @@ export const testimonios = [
       "Excelente experiencia. Profesional, atento y con mucho conocimiento.",
   },
   {
-    name: "Alfonso Darchez",
+    name: "Alfonso Garcia",
     company: "Intro",
     message:
       "Nos ayudó a escalar nuestro sitio con soluciones técnicas efectivas y modernas.",
